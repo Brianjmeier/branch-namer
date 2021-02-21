@@ -22,6 +22,8 @@
     padding: 0;
 
     .Button {
+      width: 180.78px;
+      height: 38.06px;
       font-size: 15px;
       border: 1px solid #ced4da;
 
@@ -31,6 +33,17 @@
         border-color: #80bdff;
         outline: 0;
         box-shadow: 0 0 0 0.2rem rgb(0 123 255 / 25%);
+      }
+
+      &.copied {
+        font-size: 12px;
+        padding-top: 7px;
+        padding-right: 17px;
+      
+      svg {
+          margin-right: 5px;
+          margin-bottom: 0;
+        }
       }
 
       svg {
