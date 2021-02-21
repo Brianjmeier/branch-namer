@@ -1,0 +1,54 @@
+@import "~bootstrap/scss/bootstrap";
+
+.App {
+  width: 460px;
+  height: 150px;
+  padding: 10px;
+
+  .title {
+    font-size: 30px;
+    text-align: center;
+    color: gray;
+    font-family: "Helvetica Neue";
+    font-weight: normal;
+  }
+
+  .CopyableTextArea {
+    max-width: 460px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-top: 10px;
+    padding: 0;
+
+    .Button {
+      font-size: 15px;
+      border: 1px solid #ced4da;
+
+      &:hover {
+        color: #6c757d;
+        background-color: #fff;
+        border-color: #80bdff;
+        outline: 0;
+        box-shadow: 0 0 0 0.2rem rgb(0 123 255 / 25%);
+      }
+
+      svg {
+        width: 20px;
+        height: 20px;
+        margin-right: 5px;
+        margin-bottom: 2px;
+      }
+    }
+
+    .branch-name {
+      width: 252.5px;
+      height: 38px;
+      line-height: 0.8;
+      background-color: #fff;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  }
+}

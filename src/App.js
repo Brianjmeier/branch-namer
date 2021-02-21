@@ -1,25 +1,33 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react';
+import { snakeCase } from 'snake-case';
+import BranchInfoForm from './Components/BranchInfoForm/BranchInfoForm';
+import CopyableTextArea from './Components/CopyableTextArea/CopyableTextArea';
+import './App.scss';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+	const [ initials, setInitials ] = useState( localStorage.getItem( 'initials' ) );
+	const [ issueNumber, setIssueNumber ] = useState();
+	const [ issueName, setIssueName ] = useState();
+
+	const branchName = issueName ? `${issueNumber}-${initials}-${snakeCase( issueName )}` : '';
+
+	const saveInitials = () => {
+		localStorage.setItem( 'initials', initials );
+	};
+
+	return (
+		<div className="App">
+			<h3 className="title">Branch Namer</h3>
+			<BranchInfoForm
+				initials={initials}
+				onInitialsChange={e => setInitials( e.target.value )}
+				onNumberChange={e => setIssueNumber( e.target.value )}
+				onNameChange={e => setIssueName( e.target.value )}
+				onInitialsBlur={saveInitials}
+			/>
+			<CopyableTextArea text={branchName} />
+		</div>
+	);
 }
 
 export default App;
