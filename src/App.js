@@ -17,8 +17,9 @@ function App() {
 		setIssueName( '' );
 	};
 
+	const issueNameWithoutDoubleQuotes = issueName.replace( /"/g, "''" );
 	const branchName = issueName && initials ? `${issueNumber.trim()}-${initials.trim()}-${snakeCase( issueName )}` : '';
-	const commitMessage = issueNumber ? `Close #${issueNumber} - ${issueName}` : '';
+	const commitMessage = issueNumber ? `Close #${issueNumber} - ${issueNameWithoutDoubleQuotes}` : '';
 
 	return (
 		<div className="App">
