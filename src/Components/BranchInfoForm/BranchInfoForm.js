@@ -4,17 +4,17 @@ import Col from 'react-bootstrap/Col';
 import './BranchInfoForm.scss';
 
 const BranchInfoForm = ( {
-	initials, onInitialsChange, onNumberChange, onNameChange, onInitialsBlur
+	initials, number, name, onInitialsChange, onNumberChange, onNameChange
 } ) => (
 	<Form.Row>
 		<Col>
-			<Form.Control onBlur={onInitialsBlur} placeholder="Initials" value={initials} onChange={onInitialsChange} />
+			<Form.Control placeholder="Initials" value={initials} onChange={onInitialsChange} />
 		</Col>
 		<Col>
-			<Form.Control placeholder="Number" onChange={onNumberChange} />
+			<Form.Control placeholder="Number" value={number} onChange={onNumberChange} />
 		</Col>
 		<Col xs={7}>
-			<Form.Control placeholder="Name" onChange={onNameChange} />
+			<Form.Control placeholder="Name" value={name} onChange={onNameChange} />
 		</Col>
 	</Form.Row>
 );

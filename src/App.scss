@@ -13,7 +13,7 @@
     font-weight: normal;
   }
 
-  .CopyableTextArea {
+  .container {
     max-width: 460px;
     display: flex;
     justify-content: space-between;
@@ -21,38 +21,71 @@
     margin-top: 10px;
     padding: 0;
 
-    .Button {
-      width: 180.78px;
-      height: 38.06px;
-      font-size: 15px;
-      border: 1px solid #ced4da;
+    .CopyToClipboardButton {
+      .ButtonWithAnimation {
+        font-size: 15px;
+        border: 1px solid #ced4da;
 
-      &:hover {
-        color: #6c757d;
-        background-color: #fff;
-        border-color: #80bdff;
-        outline: 0;
-        box-shadow: 0 0 0 0.2rem rgb(0 123 255 / 25%);
-      }
-
-      &.copied {
-        font-size: 12px;
-        padding-top: 7px;
-        padding-right: 17px;
-      
-      svg {
-          margin-right: 5px;
-          margin-bottom: 0;
+        &:hover {
+          color: #6c757d;
+          background-color: #fff;
+          border-color: #80bdff;
+          outline: 0;
+          box-shadow: 0 0 0 0.2rem rgb(0 123 255 / 25%);
         }
-      }
 
-      svg {
-        width: 20px;
-        height: 20px;
-        margin-right: 5px;
-        margin-bottom: 2px;
+        &.copied {
+          font-size: 12px;
+          padding-top: 7px;
+          padding-right: 17px;
+        
+        svg {
+            margin-right: 5px;
+            margin-bottom: 0;
+          }
+        }
+
+        svg {
+          width: 20px;
+          height: 20px;
+          margin-right: 5px;
+          margin-bottom: 2px;
+        }
+
+        img {
+          width: 20px;
+          height: 20px;
+          margin-right: 5px;
+          margin-bottom: 2px;
+        }
+    }
+
+    &.copied {
+      .ButtonWithAnimation {
+          font-size: 12px;
+          width: 180.78px;
+          height: 38.06px;
+          padding-top: 7px;
+          padding-right: 17px;
+        
+        svg {
+            margin-right: 5px;
+            margin-bottom: 0;
+          }
       }
     }
+
+    &.commitMessage {
+      .ButtonWithAnimation {
+          font-size: 12px;
+          width: 180.78px;
+          height: 38.06px;
+          padding: 0 0 0 0;
+          padding-top: 7px;
+          padding-bottom: 5px;
+      }
+    }
+  }
 
     .branch-name {
       width: 252.5px;

@@ -1,12 +1,12 @@
 {
   "name": "Branch Namer",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "manifest_version": 2,
   "icons": {
     "512": "icon.png"
   },
   "description": "Create branch names with issue and initials",
   "browser_action": {
-      "default_popup": "popup.html"
+    "default_popup": "popup.html"
   }
 }
