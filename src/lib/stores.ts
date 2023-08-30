@@ -1,4 +1,4 @@
-import { writable } from "svelte/store";
+import { writable, type Writable } from "svelte/store";
 
 const createPersistedStoreWith = (key: string, initialValue: string) : Writable<string> => {
 	const localStorageKey = `branch-namer-${key}`;

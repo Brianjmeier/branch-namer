@@ -15,8 +15,8 @@
 		pointer-events: none;
 		width: 480px;
 		height: 170px;
-		top: 8px;
-		left: 8px;
+		top: 0px;
+		left: 0px;
 		border-radius: 8px;
 		background-color: rgba(28, 25, 25, 0.592);
     transition: opacity 0.2s ease-in;

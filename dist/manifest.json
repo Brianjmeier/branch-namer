@@ -3,11 +3,11 @@
   "version": "1.2.0",
   "manifest_version": 3,
   "icons": {
-    "512": "icon.png"
+    "512": "assets/icon-27b1dc7a.png"
   },
   "description": "Create branch names with issue and initials",
   "action": {
-    "default_popup": "popup.html"
+    "default_popup": "index.html"
   },
   "permissions" : [
     "clipboardWrite"

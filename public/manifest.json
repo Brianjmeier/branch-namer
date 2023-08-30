@@ -1,12 +1,15 @@
 {
   "name": "Branch Namer",
-  "version": "1.1.0",
-  "manifest_version": 2,
+  "version": "1.2.0",
+  "manifest_version": 3,
   "icons": {
-    "512": "icon.png"
+    "512": "assets/icon-27b1dc7a.png"
   },
   "description": "Create branch names with issue and initials",
-  "browser_action": {
-    "default_popup": "popup.html"
-  }
+  "action": {
+    "default_popup": "index.html"
+  },
+  "permissions" : [
+    "clipboardWrite"
+  ]
 }

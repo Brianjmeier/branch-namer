@@ -5,7 +5,6 @@
   import Form from "./lib/Form.svelte";
 </script>
 
-<!-- <main> -->
 <main>
   <Title/>
   <Form />
